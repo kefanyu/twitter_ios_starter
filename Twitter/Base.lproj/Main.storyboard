@@ -58,7 +58,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tweetCell" rowHeight="120" id="S52-fm-DOp">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tweetCell" rowHeight="120" id="S52-fm-DOp" customClass="TweetCellTableViewCell" customModule="Twitter" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="S52-fm-DOp" id="qYt-SN-ODZ">
@@ -102,6 +102,11 @@
                                         <constraint firstItem="l7s-0u-dbL" firstAttribute="bottom" secondItem="qYt-SN-ODZ" secondAttribute="bottomMargin" id="woC-E1-RwQ"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="profileImageView" destination="7rA-04-aXX" id="gzq-TR-Q4m"/>
+                                    <outlet property="tweetLabel" destination="l7s-0u-dbL" id="EFc-hv-DPM"/>
+                                    <outlet property="userNameLabel" destination="gdh-eq-6Pz" id="atk-Dt-c8y"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -111,7 +116,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Home" id="wtg-MN-Z2T">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="FXM-Yq-WSg">
-                            <color key="tintColor" systemColor="systemYellowColor"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="onLogout:" destination="sUS-aD-TS1" id="b0K-aZ-ksp"/>
                             </connections>
@@ -129,7 +134,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="IRI-np-u0a">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.52985598759999997" green="1" blue="0.94327458119999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
                         <color key="tintColor" red="0.43644387579999999" green="1" blue="0.93990514160000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="barTintColor" red="0.52985598759999997" green="1" blue="0.94327458119999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <textAttributes key="titleTextAttributes">
@@ -149,8 +154,8 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
